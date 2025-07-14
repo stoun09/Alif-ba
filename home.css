@@ -1,0 +1,351 @@
+/* home.css - Refonte complète pour une page d'accueil moderne et ludique */
+
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka:wght@400;500;600&display=swap');
+
+/* Style général */
+body {
+    font-family: 'Fredoka', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0F7FA; /* Bleu ciel de fond */
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(135deg, #F6A6C7, #F48FB1);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#welcome-message {
+    font-family: 'Comic Neue', cursive;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+#welcome-message .username {
+    color: #fff0a0; /* Jaune clair pour le pseudo */
+}
+
+/* Profil utilisateur dans l'en-tête */
+#user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.auth-link {
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.auth-link:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Contenu principal */
+main {
+    padding: 30px;
+    text-align: center;
+}
+
+.category h2, section h2 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 2.8em;
+    color: #0097A7; /* Bleu-vert foncé */
+    margin-bottom: 30px;
+}
+
+/* Liste des exercices sous forme de cartes */
+.exercise-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.exercise-button {
+    background: white;
+    border: none;
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4em;
+    font-weight: 600;
+    font-family: 'Fredoka', sans-serif;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.exercise-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+/* Couleurs spécifiques pour chaque bouton */
+.exercise-button[href*="exercice1"] { border-top: 10px solid #81C784; } /* Vert */
+.exercise-button[href*="exercice2"] { border-top: 10px solid #FFD54F; } /* Jaune */
+.exercise-button[href*="exercice3"] { border-top: 10px solid #BA68C8; } /* Violet */
+
+.exercise-button:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Styles pour les conteneurs d'exercices avec niveaux */
+.exercise-container {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace entre le titre et les boutons de niveau */
+}
+
+.exercise-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+#exercise-1 {
+    border-top: 10px solid #81C784; /* Vert, comme l'ancien bouton */
+}
+
+.exercise-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    font-family: 'Fredoka', sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+.level-selection {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.level-button {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid #ccc;
+}
+
+.level-button:hover {
+    background-color: #4DD0E1; /* Bleu-vert au survol */
+    color: white;
+    transform: translateY(-2px);
+    border-bottom-color: #0097A7;
+}
+
+.level-button.completed {
+    background-color: #A5D6A7; /* Vert clair pour les niveaux terminés */
+    color: white;
+    border-bottom-color: #66BB6A;
+    cursor: default;
+}
+
+.level-button.completed::after {
+    content: ' ✔';
+    font-weight: bold;
+}
+
+/* Tableau de classement modernisé */
+.leaderboard-section {
+    margin-top: 50px;
+}
+
+table {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 18px 20px;
+    text-align: left;
+}
+
+table th {
+    background-color: #4DD0E1; /* Bleu-vert clair */
+    color: white;
+    font-size: 1.3em;
+    font-family: 'Comic Neue', cursive;
+}
+
+table td {
+    font-size: 1.2em;
+    font-weight: 500;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover {
+    background-color: #F1F8E9; /* Vert très clair au survol */
+}
+
+/* Sélecteur de langue */
+#language-selector {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #B2EBF2;
+    background-color: #fff;
+    font-size: 1em;
+    font-family: 'Fredoka', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton de retour à l'accueil pour les pages d'exercices */
+.back-to-home-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #FFD180; /* Orange clair */
+    color: #333;
+    padding: 12px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-family: 'Fredoka', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 1000; /* S'assurer qu'il est au-dessus des autres éléments */
+}
+
+.back-to-home-btn:hover {
+    background-color: #FFB74D; /* Orange plus foncé */
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Media Queries pour le Responsive Design --- */
+
+/* Pour les tablettes (jusqu'à 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    #welcome-message {
+        font-size: 1.8em;
+    }
+
+    .profile-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .category h2, section h2 {
+        font-size: 2.2em;
+    }
+
+    .exercise-button {
+        width: 220px;
+        font-size: 1.2em;
+        padding: 20px;
+    }
+
+    table th, table td {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+}
+
+/* Pour les mobiles (jusqu'à 480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    #welcome-message {
+        font-size: 1.6em;
+        order: 1; /* Mettre le message de bienvenue après le profil */
+    }
+
+    #user-profile {
+        order: 2;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .exercise-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .exercise-button {
+        width: 100%;
+        box-sizing: border-box; /* S'assurer que le padding ne dépasse pas */
+    }
+
+    .back-to-home-btn {
+        top: 10px;
+        left: 10px;
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    #language-selector {
+        bottom: 10px;
+        right: 10px;
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,255 @@
+/* auth.css - Styles améliorés pour l'authentification */
+
+/* Applique un style de base au corps des pages d'authentification pour centrer le contenu */
+.auth-page-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #E0F7FA; /* Bleu clair de fond, cohérent avec le thème */
+    font-family: 'Fredoka', sans-serif;
+    padding: 20px;
+}
+
+.auth-wrapper {
+    text-align: center;
+}
+
+.site-header {
+    margin-bottom: 30px;
+}
+
+.site-header h1 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 4.5em;
+    color: #F48FB1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+.site-header p {
+    font-size: 1.5em;
+    color: #0097A7;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.site-header .home-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Conteneur principal pour les formulaires */
+.auth-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    border: 3px solid #fff;
+    transition: all 0.3s ease;
+    text-align: left; /* Aligne le contenu du formulaire à gauche */
+}
+
+.auth-container h1 {
+    font-family: 'Comic Neue', cursive;
+    color: #F48FB1; /* Rose pour le titre */
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    text-align: center; /* Centre le titre du formulaire */
+}
+
+/* Style des groupes de formulaire (label + input) */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #B2EBF2; /* Bordure bleu clair */
+    border-radius: 15px;
+    font-family: 'Fredoka', sans-serif;
+    box-sizing: border-box; /* Assure que le padding n'affecte pas la largeur */
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4DD0E1; /* Bleu plus vif au focus */
+    box-shadow: 0 0 10px rgba(77, 208, 225, 0.5);
+}
+
+/* Bouton principal d'action */
+.btn-auth {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5em;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #81C784; /* Vert pour l'action positive */
+    color: white;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.btn-auth:hover {
+    background-color: #66BB6A;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Liens pour changer de formulaire (connexion/inscription) */
+.auth-switch {
+    margin-top: 25px;
+    font-size: 1.1em;
+}
+
+.auth-switch a {
+    color: #F48FB1; /* Rose */
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+/* Messages d'erreur */
+.error-message {
+    color: #EF5350; /* Rouge pour les erreurs */
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 8px;
+    min-height: 1.2em;
+}
+
+/* Sélecteur d'avatar amélioré */
+.avatar-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espace entre les avatars */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.avatar-option {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.avatar-option:hover {
+    transform: scale(1.1);
+    border-color: #f0f0f0;
+}
+
+.avatar-option.active {
+    border-color: #4DD0E1; /* Bleu vif pour l'avatar sélectionné */
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(77, 208, 225, 0.8);
+}
+
+/* Style pour le mode invité sur la page de connexion */
+.guest-mode-container {
+    text-align: center;
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+}
+
+.guest-mode-container .separator {
+    display: block;
+    color: #aaa;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.btn-guest {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.btn-guest:hover {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+    transform: translateY(-2px);
+}
+
+/* --- Media Queries pour le Responsive Design --- */
+
+/* Pour les tablettes et petits écrans (jusqu'à 768px) */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 3.5em;
+    }
+
+    .site-header p {
+        font-size: 1.2em;
+    }
+
+    .auth-container {
+        padding: 30px;
+    }
+}
+
+/* Pour les mobiles (jusqu'à 480px) */
+@media (max-width: 480px) {
+    .auth-page-body {
+        padding: 10px;
+    }
+
+    .site-header h1 {
+        font-size: 2.8em;
+    }
+
+    .site-header p {
+        font-size: 1em;
+    }
+
+    .auth-container {
+        padding: 20px;
+    }
+
+    .auth-container h1 {
+        font-size: 2em;
+    }
+
+    .form-group input, .btn-auth {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .avatar-option {
+        width: 60px;
+        height: 60px;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate-key="login_title">Connexion - Alif Ba</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page-body">
+    <div class="auth-wrapper">
+        <div class="site-header">
+            <a href="index.html" class="home-link"><h1>Alif-ba</h1></a>
+            <p data-translate-key="login_subtitle">Connecte-toi pour continuer l'aventure !</p>
+        </div>
+        <div class="container auth-container">
+            <h1 data-translate-key="login_heading">Connexion</h1>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username" data-translate-key="login_username_label">Quel est ton pseudo ?</label>
+                    <input type="text" id="username" name="username" required>
+                    <p id="login-error" class="error-message"></p>
+                </div>
+                <button type="submit" class="btn-auth" data-translate-key="login_button">Se connecter</button>
+            </form>
+            <p class="auth-switch"><span data-translate-key="login_register_prompt">Pas encore de compte ?</span> <a href="register.html" data-translate-key="login_register_link">Inscris-toi</a></p>
+            <div class="guest-mode-container">
+                <span class="separator" data-translate-key="login_separator">ou</span>
+                <a href="#" id="guest-mode" class="btn-guest" data-translate-key="login_guest_link">Continuer en mode invité</a>
+            </div>
+        </div>
+    </div>
+    <select id="language-selector">
+        <option value="fr">Français</option>
+        <option value="en">Anglais</option>
+        <option value="ar">Arabe</option>
+    </select>
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

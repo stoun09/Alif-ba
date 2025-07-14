@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alif-ba : Apprendre l'arabe en s'amusant</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <header>
+        <div id="user-profile">
+            <!-- Les informations de l'utilisateur (avatar, etc.) seront injectées ici par auth.js -->
+        </div>
+        <h1 id="welcome-message" data-translate-key="welcome_message">Bienvenue sur Alif-ba !</h1>
+        <p data-translate-key="welcome_subtitle">Prêt à apprendre l'arabe en t'amusant ?</p>
+    </header>
+    <main>
+        <section class="category">
+            <h2 data-translate-key="category_beginner">Débutant</h2>
+            <div class="exercise-list">
+                <div class="exercise-container" id="exercise-1">
+                    <h3 class="exercise-title" data-translate-key="exercise1_title">Exercice 1 : Composer les mots</h3>
+                    <div class="level-selection">
+                        <a href="exercice1/exercice1.html?level=1" class="level-button" data-level="1">Niveau 1</a>
+                        <a href="exercice1/exercice1.html?level=2" class="level-button" data-level="2">Niveau 2</a>
+                        <a href="exercice1/exercice1.html?level=3" class="level-button" data-level="3">Niveau 3</a>
+                    </div>
+                </div>
+                <a href="exercice2/exercice2.html" class="exercise-button" data-translate-key="exercise2_title">Exercice 2 : Identifier la lettre</a>
+                <a href="exercice3/exercice3.html" class="exercise-button" data-translate-key="exercise3_title">Exercice 3 : Répéter un mot</a>
+                <a href="fiche-revision/fiche-revision.html" class="exercise-button" data-translate-key="revision_sheet_title">Fiche de révision</a>
+            </div>
+        </section>
+        <section>
+            <h2 data-translate-key="leaderboard_title">Classement des meilleurs élèves</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th data-translate-key="leaderboard_name">Nom</th>
+                        <th data-translate-key="leaderboard_score">Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- Les données des élèves seront injectées ici -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+    <script src="auth.js"></script>
+    <script src="home.js"></script>
+    <select id="language-selector">
+        <option value="fr">Français</option>
+        <option value="en">Anglais</option>
+        <option value="ar">Arabe</option>
+    </select>
+</body>
+</html>

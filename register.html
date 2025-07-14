@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate-key="register_title">Inscription - Alif Ba</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page-body">
+    <div class="auth-wrapper">
+        <div class="site-header">
+            <a href="index.html" class="home-link"><h1>Alif-ba</h1></a>
+            <p data-translate-key="register_subtitle">Crée ton compte et commence l'aventure !</p>
+        </div>
+        <div class="container auth-container">
+            <h1 data-translate-key="register_heading">Inscription</h1>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="username" data-translate-key="register_username_label">Choisis un pseudo</label>
+                    <input type="text" id="username" name="username" required>
+                    <p id="username-error" class="error-message"></p>
+                </div>
+                <div class="form-group">
+                    <label for="age" data-translate-key="register_age_label">Quel âge as-tu ?</label>
+                    <input type="number" id="age" name="age" min="4" max="12" required>
+                </div>
+                <div class="form-group">
+                    <label data-translate-key="register_avatar_label">Choisis ton avatar</label>
+                    <div class="avatar-selector">
+                        <img src="images/avatars/avatar1.png" alt="Avatar 1" class="avatar-option active" data-avatar="avatar1.png">
+                        <img src="images/avatars/avatar2.png" alt="Avatar 2" class="avatar-option" data-avatar="avatar2.png">
+                        <img src="images/avatars/avatar3.png" alt="Avatar 3" class="avatar-option" data-avatar="avatar3.png">
+                        <img src="images/avatars/avatar4.png" alt="Avatar 4" class="avatar-option" data-avatar="avatar4.png">
+                    </div>
+                </div>
+                <button type="submit" class="btn-auth" data-translate-key="register_button">S'inscrire</button>
+            </form>
+            <p class="auth-switch"><span data-translate-key="register_login_prompt">Tu as déjà un compte ?</span> <a href="login.html" data-translate-key="register_login_link">Connecte-toi</a></p>
+        </div>
+    </div>
+    <select id="language-selector">
+        <option value="fr">Français</option>
+        <option value="en">Anglais</option>
+        <option value="ar">Arabe</option>
+    </select>
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

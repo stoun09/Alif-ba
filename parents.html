@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord Parents - Alif Ba</title>
+    <link rel="stylesheet" href="home.css"> <!-- Réutilise certains styles de base -->
+    <link rel="stylesheet" href="parents.css">
+</head>
+<body>
+    <a href="home.html" class="back-to-home-btn">🏠 Retour à l'accueil</a>
+
+    <main class="container">
+        <header>
+            <h1>Tableau de Bord</h1>
+            <p>Suivez les progrès de votre enfant.</p>
+        </header>
+
+        <div id="user-selector-container" class="dashboard-card">
+            <label for="user-selector">Choisir un profil à consulter :</label>
+            <select id="user-selector">
+                <option value="">-- Sélectionnez un enfant --</option>
+            </select>
+        </div>
+
+        <div id="dashboard-content">
+            <!-- Ce contenu sera rempli par parents.js -->
+        </div>
+
+        <div id="areas-for-improvement" class="dashboard-card">
+            <h2>Points à améliorer</h2>
+            <ul id="areas-for-improvement-list">
+                <!-- Liste des points à améliorer -->
+            </ul>
+        </div>
+
+        <div id="no-user-message" style="display: none;">
+            <p>Aucun profil d'enfant n'a été trouvé. Veuillez en créer un depuis la page d'inscription.</p>
+            <a href="login.html" class="auth-link">Se connecter</a>
+        </div>
+
+    </main>
+
+    <script src="auth.js"></script> <!-- Ajout pour accéder à la DB -->
+    <script src="progressManager.js"></script>
+    <script src="parents.js"></script>
+</body>
+</html>

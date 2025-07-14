@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate-key="landing_title">Bienvenue sur Alif-ba</title>
+    <link rel="stylesheet" href="landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="landing-container">
+        <div class="site-header">
+            <h1>Alif-ba</h1>
+            <p data-translate-key="landing_subtitle">Apprends l'arabe en t'amusant !</p>
+        </div>
+        <nav class="main-nav">
+            <a href="login.html" class="nav-button login" data-translate-key="landing_login_button">Connexion</a>
+            <a href="register.html" class="nav-button register" data-translate-key="landing_register_button">Inscription</a>
+            <a href="#" id="parent-access-btn" class="nav-button parent" data-translate-key="landing_parent_access">Accès Parents</a>
+        </nav>
+    </div>
+    <select id="language-selector">
+        <option value="fr">Français</option>
+        <option value="en">Anglais</option>
+        <option value="ar">Arabe</option>
+    </select>
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+    <script src="auth.js"></script> <!-- Script pour gérer le clic sur "Accès Parents" -->
+</body>
+</html>
